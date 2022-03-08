@@ -7,6 +7,7 @@ import { EncabezadosComponent } from './componentes/encabezados/encabezados.comp
 import { AcercadeComponent } from './componentes/acercade/acercade.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { PiepaginaComponent } from './componentes/piepagina/piepagina.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PiepaginaComponent } from './componentes/piepagina/piepagina.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
