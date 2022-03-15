@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent implements OnInit {
-
+ acercaDeAutenticado:boolean=false;
   constructor() { }
 
   ngOnInit(): void {

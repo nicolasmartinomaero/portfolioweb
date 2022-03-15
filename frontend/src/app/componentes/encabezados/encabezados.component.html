@@ -10,8 +10,9 @@
     />
   </div>
   <h1 id="fullName" class="titulo">
-  {{ persona.fullName }}
+    {{ persona.fullName }}
   </h1>
   <p id="position">{{ persona.position }}</p>
   <p id="ubication">{{ persona.ubication }}</p>
+  <button *ngIf="usuarioAutenticado" class="btn btn-dark">EDITAR</button>
 </header>
