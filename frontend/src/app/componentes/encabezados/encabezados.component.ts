@@ -8,7 +8,7 @@ import { MiportfolioService } from 'src/app/servicios/miportfolio.service';
 })
 export class EncabezadosComponent implements OnInit {
 persona:any;
-  usuarioAutenticado:boolean=false;
+  usuarioAutenticado:boolean=true;
   constructor(private miServicioDePortfolio:MiportfolioService) { }
 
   ngOnInit(): void {
