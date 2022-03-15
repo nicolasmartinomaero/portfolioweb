@@ -1,32 +1,15 @@
 <section>
-    <h1>Educacion</h1>
+    <h1>Educación</h1>
     <div class="container-fluid">
-        <div class="row">
+        <div *ngFor="let item of educacion" class="row mb-3">
             <div class="col-2">
-                <img src="./assets/imagenes/argentina.jpg" class="img-fluid" alt="argentina programa">
-            </div>
-            <div class="col">  
-                <h2>Argentina Programa</h2>
-                <p># Se Programar</p>
-                <p># Yo Programo</p>  
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-2">
-                <img src="./assets/imagenes/santodomingo.jpg" width="60%" alt="Santo domingo">
+                <img [src]="item.img" class="img-fluid" alt="">
             </div>
             <div class="col">
-                <h2>Instituto Santo Domingo</h2>
-                <p># Analista de Sistemas</p>
+                <h2>{{item.school}}</h2>
+                <p>{{item.title}}</p>
+                <p>{{item.career}}</p>
             </div>
-          </div>
-          <div class="row">
-              <div class="col-2">
-                  <img src="./assets/imagenes/ipef.png" class="img-fluid" alt="ipef">
-              </div>
-              <div class="col">  
-                  <h2>Instituto Provincial de Educacion Fisica</h2>
-                  <p># Profesorado de Educacion Fisica (Recibido)</p>
-                    
-              </div>
-      </div>
+        </div>
+    </div>
+  </section>
