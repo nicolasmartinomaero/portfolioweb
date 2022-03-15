@@ -1,4 +1,12 @@
-h1{
-    color:black;
-    text-decoration: underline solid rgb(5, 0, 0);
+header div {
+    font-family: Impact, Charcoal, sans-serif;
+   font-size: 27px;
+   letter-spacing: 2px;
+   word-spacing: 2px;
+   color: #000000;
+   font-weight: 700;
+   text-decoration: underline solid rgb(68, 68, 68);
+   font-style: normal;
+   font-variant: normal;
+   text-transform: uppercase;
 }

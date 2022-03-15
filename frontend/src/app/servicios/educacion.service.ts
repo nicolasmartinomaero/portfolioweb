@@ -2,16 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EducacionService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) 
-  { 
-    
-  }
-
-  obtenerDatosEducacion():Observable<any>{
+  obtenerDatosEducacion(): Observable<any> {
     return this.http.get('./assets/data/educacion.json');
   }
 }

@@ -1,28 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 20px;
 }
 section h1 {
-    color: black;
+  color: black;
 }
-.titulo{
-   font-family: Impact, Charcoal, sans-serif;
-   font-size: 27px;
-   letter-spacing: 2px;
-   word-spacing: 2px;
-   color: #000000;
-   font-weight: 700;
-   text-decoration: underline solid rgb(68, 68, 68);
-   font-style: normal;
-   font-variant: normal;
-   text-transform: uppercase;
+.titulo {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 27px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  text-decoration: underline solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
 }
 section {
-    border-color: black;
-    border-style: outset;
-    border-width: 1px;
-    border-radius: 15px;
-    margin-bottom: 5px;
-    padding: 9px;
-    }
+  border-color: black;
+  border-style: outset;
+  border-width: 1px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  padding: 9px;
+}

@@ -1,15 +1,15 @@
 <section>
-    <h1>Educación</h1>
-    <div class="container-fluid">
-        <div *ngFor="let item of educacion" class="row mb-3">
-            <div class="col-2">
-                <img [src]="item.img" class="img-fluid" alt="">
-            </div>
-            <div class="col">
-                <h2>{{item.school}}</h2>
-                <p>{{item.title}}</p>
-                <p>{{item.career}}</p>
-            </div>
-        </div>
+  <h1>Educación</h1>
+  <div class="container-fluid">
+    <div *ngFor="let item of educacion" class="row mb-3">
+      <div class="col-2">
+        <img [src]="item.img" class="img-fluid" alt="" />
+      </div>
+      <div class="col">
+        <h2>{{ item.school }}</h2>
+        <p>{{ item.title }}</p>
+        <p>{{ item.career }}</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
