@@ -43,22 +43,22 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form [formGroup]="form">
           <div class="mb-3">
             <label for="fullName" class="form-label">Apellido y Nombre</label>
-            <input type="email" class="form-control" id="fullName" />
+            <input type="text" class="form-control" id="fullName" formControlName="fullName">
           </div>
           <div class="mb-3">
             <label for="position" class="form-label">Posición</label>
-            <input type="email" class="form-control" id="position"/>
+            <input type="text" class="form-control" id="position" formControlName="position">
           </div>
           <div class="mb-3">
             <label for="ubication" class="form-label">Lugar de Residencia</label>
-            <input type="email" class="form-control" id="ubication" />
+            <input type="text" class="form-control" id="ubication" formControlName="ubication">
           </div>
           <div class="mb-3">
             <label for="img" class="form-label">URL De La Imagen</label>
-            <input type="email" class="form-control" id="img" />
+            <input type="text" class="form-control" id="img" formControlName="img">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

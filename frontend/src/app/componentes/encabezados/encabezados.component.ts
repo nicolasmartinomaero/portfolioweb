@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 import { MiportfolioService } from 'src/app/servicios/miportfolio.service';
 
 @Component({
@@ -9,7 +11,15 @@ import { MiportfolioService } from 'src/app/servicios/miportfolio.service';
 export class EncabezadosComponent implements OnInit {
 persona:any;
   usuarioAutenticado:boolean=true;
-  constructor(private miServicioDePortfolio:MiportfolioService) { }
+  form!:FormGroup;
+  constructor(private miServicioDePortfolio:MiportfolioService, private formBuilder:FormBuilder) { 
+   this.form=this.formBuilder.group({
+    fullName:[' '],
+    position:[' '],
+    ubication:[' '],
+    img:[' ']
+   })
+  }
 
   ngOnInit(): void {
     this.miServicioDePortfolio.obtenerDatosPersona().subscribe(data => {
