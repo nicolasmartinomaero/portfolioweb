@@ -46,28 +46,62 @@
         <form [formGroup]="form">
           <div class="mb-3">
             <label for="fullName" class="form-label">Apellido y Nombre</label>
-            <input type="text" class="form-control" id="fullName" formControlName="fullName">
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              formControlName="fullName"
+            />
+            <div
+              *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)"
+              class="alert">
+              <div *ngIf="fullName?.errors?.['required']" class="text-danger">
+                El apellido y el nombre son obligatorios.
+              </div>
+            </div>
           </div>
           <div class="mb-3">
             <label for="position" class="form-label">Posición</label>
-            <input type="text" class="form-control" id="position" formControlName="position">
+            <input
+              type="text"
+              class="form-control"
+              id="position"
+              formControlName="position"
+            />
           </div>
           <div class="mb-3">
-            <label for="ubication" class="form-label">Lugar de Residencia</label>
-            <input type="text" class="form-control" id="ubication" formControlName="ubication">
+            <label for="ubication" class="form-label"
+              >Lugar de Residencia</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="ubication"
+              formControlName="ubication"
+            />
           </div>
           <div class="mb-3">
             <label for="img" class="form-label">URL De La Imagen</label>
-            <input type="text" class="form-control" id="img" formControlName="img">
+            <input
+              type="text"
+              class="form-control"
+              id="img"
+              formControlName="img"
+            />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="guardarEncabezado()"
+        >
+          Guardar
+        </button>
       </div>
     </div>
   </div>
