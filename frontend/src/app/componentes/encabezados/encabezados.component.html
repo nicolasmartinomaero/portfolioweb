@@ -53,8 +53,10 @@
               formControlName="fullName"
             />
             <div
-              *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)"
-              class="alert">
+              *ngIf="
+                fullName?.invalid && (fullName?.dirty || fullName?.touched)
+              "
+            >
               <div *ngIf="fullName?.errors?.['required']" class="text-danger">
                 El apellido y el nombre son obligatorios.
               </div>
@@ -68,6 +70,15 @@
               id="position"
               formControlName="position"
             />
+            <div
+            *ngIf="
+              position?.invalid && (position?.dirty || position?.touched)
+            "
+          >
+            <div *ngIf="position?.errors?.['required']" class="text-danger">
+              La posicion es obligatoria.
+            </div>
+          </div>
           </div>
           <div class="mb-3">
             <label for="ubication" class="form-label"
@@ -79,6 +90,15 @@
               id="ubication"
               formControlName="ubication"
             />
+            <div
+            *ngIf="
+              ubication?.invalid && (ubication?.dirty || ubication?.touched)
+            "
+          >
+            <div *ngIf="ubication?.errors?.['required']" class="text-danger">
+              La ubicacion es obligatoria.
+            </div>
+          </div>
           </div>
           <div class="mb-3">
             <label for="img" class="form-label">URL De La Imagen</label>
@@ -88,6 +108,18 @@
               id="img"
               formControlName="img"
             />
+            <div
+            *ngIf="
+             img?.invalid && (img?.dirty || img?.touched)
+            "
+          >
+            <div *ngIf="img?.errors?.['required']" class="text-danger">
+              La url es obgligatoria.
+            </div>
+            <div *ngIf="img?.errors?.['pattern']" class="text-danger">
+              El formato no es valido .
+            </div>
+          </div>
           </div>
         </form>
       </div>
