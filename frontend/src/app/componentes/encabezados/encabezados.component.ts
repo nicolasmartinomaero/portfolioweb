@@ -36,7 +36,8 @@ export class EncabezadosComponent implements OnInit {
       // llama a un servicio
     }
     else {
-      alert("Hay campos incompletos o no validos")
+      this.form.markAllAsTouched();
+      alert("Hay campos incompletos o no validos");
     }
   }
   get fullName(){
