@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "fullName": "Nicolas Martino Maero",
+      "position": "Desarrollador Web",
+      "ubication": "Cordoba Capital (Argentina)",
+      "img": "https://scontent.fcor2-2.fna.fbcdn.net/v/t1.6435-9/89465679_10220198004573998_3789511389710647296_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEh__XqLYwsfpCuEWSRS6Kngg4DzgLGWiOCDgPOAsZaI86tSEWPvRqPltCmx9n1U0M&_nc_ohc=ni7UOJL2cvQAX-RtaFX&_nc_ht=scontent.fcor2-2.fna&oh=00_AT8gX21fpI833lH1xXIpwCjAxO-0MzMk28ccqfl-SZFREg&oe=62503F88",
+      "id": 5
+    },
+    {
+      "fullName": "pedro gomez",
+      "position": "informatico",
+      "ubication": "san juan",
+      "img": "https://fotos.perfil.com/2022/03/11/trim/720/410/messi-1324524.jpg",
+      "id": 6
+    },
+    {
+      "fullName": "Lourdes Camppo",
+      "position": "PROFESORA",
+      "ubication": "CORDOBA",
+      "img": "https://fotos.perfil.com/2022/03/11/trim/720/410/messi-1324524.jpg",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

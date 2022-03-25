@@ -3,60 +3,33 @@
     <h1>MI PORTFOLIO</h1>
   </div>
   <div style="text-align: left">
-    <img
-      [src]="persona.image"
-      style="width: 20%"
-      alt="Foto de Nicolas Martino Maero"
-    />
+    <img [src]="persona.image" style="width: 20%" alt="Foto de Nicolas Martino Maero" />
   </div>
   <h1 id="fullName" class="titulo">
     {{ persona.fullName }}
   </h1>
   <p id="position">{{ persona.position }}</p>
   <p id="ubication">{{ persona.ubication }}</p>
-  <button
-    *ngIf="usuarioAutenticado"
-    class="btn btn-dark"
-    data-bs-toggle="modal"
-    data-bs-target="#modalEncabezado"
-  >
+  <button *ngIf="usuarioAutenticado" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalEncabezado" (click)="mostrarDatosEncabezado()">
     EDITAR
   </button>
 </header>
 
-<div
-  class="modal fade"
-  id="modalEncabezado"
-  tabindex="-1"
-  aria-labelledby="modalEncabezadoLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="modalEncabezado" tabindex="-1" aria-labelledby="modalEncabezadoLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalEncabezado">Editar Encabezado</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form [formGroup]="form">
           <div class="mb-3">
             <label for="fullName" class="form-label">Apellido y Nombre</label>
-            <input
-              type="text"
-              class="form-control"
-              id="fullName"
-              formControlName="fullName"
-            />
-            <div
-              *ngIf="
+            <input type="text" class="form-control" id="fullName" formControlName="fullName" />
+            <div *ngIf="
                 fullName?.invalid && (fullName?.dirty || fullName?.touched)
-              "
-            >
+              ">
               <div *ngIf="fullName?.errors?.['required']" class="text-danger">
                 El apellido y el nombre son obligatorios.
               </div>
@@ -64,74 +37,47 @@
           </div>
           <div class="mb-3">
             <label for="position" class="form-label">Posición</label>
-            <input
-              type="text"
-              class="form-control"
-              id="position"
-              formControlName="position"
-            />
-            <div
-            *ngIf="
+            <input type="text" class="form-control" id="position" formControlName="position" />
+            <div *ngIf="
               position?.invalid && (position?.dirty || position?.touched)
-            "
-          >
-            <div *ngIf="position?.errors?.['required']" class="text-danger">
-              La posicion es obligatoria.
+            ">
+              <div *ngIf="position?.errors?.['required']" class="text-danger">
+                La posicion es obligatoria.
+              </div>
             </div>
-          </div>
           </div>
           <div class="mb-3">
-            <label for="ubication" class="form-label"
-              >Lugar de Residencia</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="ubication"
-              formControlName="ubication"
-            />
-            <div
-            *ngIf="
+            <label for="ubication" class="form-label">Lugar de Residencia</label>
+            <input type="text" class="form-control" id="ubication" formControlName="ubication" />
+            <div *ngIf="
               ubication?.invalid && (ubication?.dirty || ubication?.touched)
-            "
-          >
-            <div *ngIf="ubication?.errors?.['required']" class="text-danger">
-              La ubicacion es obligatoria.
+            ">
+              <div *ngIf="ubication?.errors?.['required']" class="text-danger">
+                La ubicacion es obligatoria.
+              </div>
             </div>
-          </div>
           </div>
           <div class="mb-3">
             <label for="img" class="form-label">URL De La Imagen</label>
-            <input
-              type="text"
-              class="form-control"
-              id="img"
-              formControlName="img"
-            />
-            <div
-            *ngIf="
+            <input type="text" class="form-control" id="img" formControlName="img" />
+            <div *ngIf="
              img?.invalid && (img?.dirty || img?.touched)
-            "
-          >
-            <div *ngIf="img?.errors?.['required']" class="text-danger">
-              La url es obgligatoria.
+            ">
+              <div *ngIf="img?.errors?.['required']" class="text-danger">
+                La url es obgligatoria.
+              </div>
+              <div *ngIf="img?.errors?.['pattern']" class="text-danger">
+                El formato no es valido.
+              </div>
             </div>
-            <div *ngIf="img?.errors?.['pattern']" class="text-danger">
-              El formato no es valido.
-            </div>
-          </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button type="button" id="cerrarEncabezadoModal" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
-        <button
-          type="button"
-          class="btn btn-primary"
-          (click)="guardarEncabezado()"
-        >
+        <button type="button" class="btn btn-primary" (click)="guardarEncabezado()">
           Guardar
         </button>
       </div>
